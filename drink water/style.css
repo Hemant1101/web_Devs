@@ -1,0 +1,99 @@
+:root {
+	--border-color: #144fc6;
+	--fill-color: #6ab3f8;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: sans-serif;
+	background: #3494e4;
+	color: #fff;
+}
+
+h1 {
+	margin: 10px 0 0 0;
+}
+
+h3 {
+	font-weight: 400;
+	margin: 10px 0;
+}
+.cup {
+	background: #fff;
+	border: 4px solid var(--border-color);
+	color: var(--border-color);
+	border-radius: 0 0 40px 40px;
+	height: 20rem;
+	width: 10rem;
+	margin: 2rem 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.cup.cup-small {
+	background: rgba(255, 255, 255, 0.8);
+	height: 6rem;
+	width: 3.4rem;
+	border: 2.8px solid var(--border-color);
+	border-radius: 0 0 1rem 1rem;
+	cursor: pointer;
+	justify-content: center;
+	text-align: center;
+	font-size: 14px;
+	margin: 5px;
+	transition: 0.2s all ease-in-out;
+}
+
+.cup.cup-small.full {
+	background: var(--fill-color);
+	color: #fff;
+}
+
+.cups {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 17rem;
+}
+
+.remained {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex: 1;
+	transition: 0.3s all ease;
+}
+
+.remained span {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.remained small {
+	font-size: 12px;
+}
+
+.percentage {
+	background: var(--fill-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+}
+
+.text {
+	text-align: center;
+	margin: 0 0 5px;
+}

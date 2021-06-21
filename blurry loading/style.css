@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.bg {
+	background: url("./Naruto-wallpaper.jpg") no-repeat center center/cover;
+	position: absolute;
+	top: -2rem;
+	left: -2rem;
+	width: calc(100vw + 4rem);
+	height: calc(100vh + 4rem);
+	z-index: -1;
+	filter: blur(40px);
+}
+
+.loading-text {
+	color: #fff;
+	font-size: 3.2rem;
+}
