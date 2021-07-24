@@ -9,7 +9,8 @@
 		#004e92,
 		rgb(15, 133, 211),
 		rgb(15, 198, 211),
-		rgb(15, 211, 201)
+		rgb(15, 211, 201),
+		rgb(15, 211, 201),
 	);
 }
 
@@ -163,7 +164,9 @@ body {
 @media (max-width: 600px) {
 	body {
 		min-height: 110vh;
+		height:auto;
 		scroll-behavior: smooth;
+		overflow-y:scroll;
 	}
 	.card {
 		max-width: 80vw;
