@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 
+:root {
+	--gradient: linear-gradient(
+		45deg,
+		#000428,
+		#000c75,
+		#002c92,
+		#004e92,
+		rgb(15, 133, 211),
+		rgb(15, 198, 211),
+		rgb(15, 211, 201)
+	);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,8 +22,9 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	background: -webkit-linear-gradient(to bottom, #004e92, #000428);
-	background: linear-gradient(to bottom, #004e92, #000428);
+	/* background: -webkit-linear-gradient(to bottom, #004e92, #000428); */
+	background-image: var(--gradient);
+	background-size: 400%;
 	color: #fff;
 	font-family: "Poppins", sans-serif;
 	display: flex;
@@ -18,6 +32,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	overflow: hidden;
+	animation: bg-animation 10s infinite alternate;
 }
 
 .user-form {
@@ -29,11 +44,14 @@ body {
 
 .user-form input {
 	position: relative;
-	width: 90%;
-	display: block;
+	width: 70%;
+	display: inline-block;
 	background: #134288de;
-	border: 1px solid #00042834;
-	border-radius: 12px;
+	border-bottom: 1px solid #00042834;
+	border-top: 1px solid #00042834;
+	border-left: 1px solid #00042834;
+	border-radius: 12px 0 0 12px;
+	border-right: 0;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 0;
@@ -44,6 +62,26 @@ body {
 	color: #fff;
 	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
 		0 15px 40px rgba(0, 0, 0, 0.1);
+}
+.user-form input[type="submit"] {
+	position: relative;
+	cursor: pointer;
+	left: -4px;
+	border-radius: 0 12px 12px 0;
+	width: 120px;
+	border: 1px solid #00042834;
+	border-left: 0;
+	outline: 0;
+	color: #00042834;
+	background: #0d2c5ade;
+	color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+		0 15px 40px rgba(0, 0, 0, 0.1);
+	transition: all 0.5s ease-in;
+}
+.user-form input[type="submit"]:hover {
+	background: #134288de;
+	color: #fff;
 }
 
 .user-form input:focus {
@@ -57,7 +95,9 @@ body {
 
 .card {
 	max-width: 50rem;
-	background: #1342884b;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(70);
+	/* background: #1342884b; */
 	border-radius: 20px;
 	box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
 		0 15px 40px rgba(0, 0, 0, 0.1);
@@ -120,7 +160,11 @@ body {
 	display: inline-block;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+	body {
+		min-height: 110vh;
+		scroll-behavior: smooth;
+	}
 	.card {
 		max-width: 80vw;
 		flex-direction: column;
@@ -128,10 +172,50 @@ body {
 		margin: 0 0;
 	}
 	.user-form {
-		max-width: 300px;
+		max-width: 400px;
 	}
 
 	.user-form input {
+		max-width: 300px;
 		padding: 0.5rem;
+	}
+	.user-form input[type="submit"] {
+		max-width: 100px;
+	}
+}
+@media (max-width: 400px) {
+	body {
+		min-height: 110vh;
+		scroll-behavior: smooth;
+	}
+	.card {
+		max-width: 95vw;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 0;
+	}
+	.user-form {
+		max-width: 380px;
+	}
+
+	.user-form input {
+		max-width: 300px;
+		padding: 0.5rem;
+		font-size: 14px;
+		margin-left: 4px;
+	}
+	.user-form input[type="submit"] {
+		max-width: 80px;
+		font-size: 14px;
+		margin-left: 0;
+	}
+}
+
+@keyframes bg-animation {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
 	}
 }
