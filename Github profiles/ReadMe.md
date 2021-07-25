@@ -16,7 +16,7 @@
 
 ### ***How it works***
 ------
-
+[preview-video](https://www.linkedin.com/posts/hemant-kumar-mandal-417a491b0_html-css-webdevelopment-activity-6824983932665118720-LzmI)
 
 
 ### ***Technologues used***
