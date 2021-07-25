@@ -8,16 +8,18 @@
 
 ### ***Desktop View***
 ------
+<img src="images/github-profiles-desktop-view-ss.jpg" width="1080px">
 
+### ***Mobile View*** 📱
+------
+<img src="images/github-profiles-mobile-view-ss.jpg" width="400">
 
 ### ***How it works***
 ------
 
-### ***Mobile View*** 📱
-------
 
 
-#### ***Technologues used***
+### ***Technologues used***
 ------
 ***For UI/Frontend: HTML / CSS***
 
